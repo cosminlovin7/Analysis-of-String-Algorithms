@@ -1,0 +1,33 @@
+Cosmin-Viorel Lovin 325CD -> Tema 1 AA
+
+Fisierele 10000words cat si input17 sunt fisiere foarte mari. Pentru 10000words, durata pentru algoritmul aho-corasick este de aprox 1 minut, iar pentru celelalte, aprox 50 minute. Aceste test nu a fost compilat, deoarece dureaza prea mult, dar l-am folosit pt a evidentia eficienta algoritmului aho-corasick fata de celelalte in cazul cautarii mai multor string-uri odata.
+
+Fisierele de intrare sunt concepute astfel incat sa teste algoritmii atat in cazurile best_case
+cat si in cazurile worst_case. Sunt 20 de teste pentru fiecare algoritm(21 cu 10000words). Testele cresc in dimensiune progresiv, de la teste mici la teste mari. Se testeaza cautarea unui singur cuvant in sir, sau a mai multor cuvinte intr-un sir. Fisierele de intrare sunt aceleasi pentru toti algoritmii.
+Pentru aho-corasick, fisierul de intrare arata astfel:
+-pe prima linie, textul in care cautam cuvintele.
+-pe a doua linie, numarul de cuvinte cautate.
+-restul liniilor contine cuvintele cautate.
+Pentru ceilalti algoritmi, fisierul de intrare arata astfel:
+-pe prima linie, lungimea textului in care cautam cuvintele.
+-pe a doua linie, textul.
+-pe a treia linie, numarul de cuvintele cautate.
+-pe a patra linie, cuvintele cautate.
+
+Fisierul este structurat din 4 foldere, fiecare contine implementarea algoritmului a carui nume
+este folosit pentru a denumi folderul.
+Fiecare folder contine un folder in cu datele de intrare, unul out, cu datele de iesire, gol, 
+fisierul algo.cpp ce contine implementarea algoritmului, fisierul algo.h, header-ul, si fisierul Makefile.
+Fisierul out pentru testul 20 nu a fost inclus, deoarece este prea mare (aprox 1gb pt fiecare algoritm), insa poate fi generat daca se ruleaza fiecare algoritm in parte.
+
+Din punctul meu de vedere, toti algoritmii functioneaza la un nivel optim. 
+Este evident faptul ca pentru a cauta mai multe cuvinte as tinde clar spre a folosi 
+aho corasick datorita felului in care este parcurs textul. Totusi, pentru un singur 
+cuvant, algoritmul este destul de ineficient din punct de vedere al spatiului, comparativ
+cu celelate. Deci pentru cautare unui singur cuvant, as folosi boyer-moore.
+
+RESURSE:
+https://www.geeksforgeeks.org/aho-corasick-algorithm-pattern-searching/
+https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
+https://www.youtube.com/watch?v=3Ft3HMizsCk&t=1s
+https://www.geeksforgeeks.org/boyer-moore-algorithm-good-suffix-heuristic/
